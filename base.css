@@ -1,0 +1,33 @@
+@import url(./variables.css);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: var(--color-black);
+    background-color: var(--color-black);
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archangelsk';
+    src: url('./fonts/Archangelsk.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

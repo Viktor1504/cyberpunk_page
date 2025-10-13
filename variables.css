@@ -1,0 +1,13 @@
+:root {
+    --color-black: #000000FF;
+    --color-white: #FFFFFFFF;
+    --color-yellow: #F8F200FF;
+    --color-aqua-green: #52BEDCFF;
+    --color-dark-gray: #777777FF;
+
+    --font-family-base: 'Roboto', sans-serif;
+    --font-family-accent: 'Archangelsk', sans-serif;
+
+    --container-width: 1280px;
+    --container-padding-x: 35px;
+}
