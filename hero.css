@@ -40,7 +40,6 @@
     max-width: 625px;
     padding: clamp(1.875rem, 0.2083rem + 8.3333vw, 4.375rem);
     background-color: var(--color-yellow);
-    clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
     transition: all 0.3s ease-in-out;
 }
 

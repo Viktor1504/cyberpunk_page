@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, p {
     margin: 0;
 }
 
@@ -69,6 +69,10 @@ body {
     max-width: calc(var(--container-width) + 2 * var(--container-padding-x));
     padding-inline: var(--container-padding-x);
     margin: 0 auto;
+}
+
+.angles-box {
+    clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
 }
 
 @font-face {
