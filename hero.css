@@ -56,7 +56,7 @@
 
 @media (max-width: 768px) {
     .container {
-        padding-inline: 0;
+        padding-inline: 5px;
     }
 
     .header {

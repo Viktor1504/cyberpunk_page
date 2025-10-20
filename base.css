@@ -75,6 +75,10 @@ body {
     clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
 }
 
+/*.decorative-line {*/
+
+/*}*/
+
 @font-face {
     font-family: 'Roboto';
     src: url('assets/fonts/Roboto-Regular.woff2') format('woff2');
