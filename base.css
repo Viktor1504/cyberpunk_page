@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
-h1, h2, p {
+h1, h2, p, form {
     margin: 0;
+}
+
+span {
+    margin: 0;
+    line-height: 1;
 }
 
 a {
@@ -26,7 +31,7 @@ ul {
     padding: 20px 50px;
     background-color: var(--color-black);
     color: var(--color-yellow);
-    font-size: 24px;
+    font-size: 1.5rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -58,7 +63,7 @@ ul {
 body {
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 34px;
     color: var(--color-black);
     background-color: var(--color-black);
@@ -75,9 +80,10 @@ body {
     clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
 }
 
-/*.decorative-line {*/
-
-/*}*/
+.aqua-text {
+    color: var(--color-aqua-green);
+    font-weight: 700;
+}
 
 @font-face {
     font-family: 'Roboto';
