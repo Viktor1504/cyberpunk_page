@@ -38,8 +38,6 @@ ul {
 }
 
 .button:hover {
-    background-color: var(--color-yellow);
-    color: var(--color-black);
     transform: translateY(-2px);
 }
 

@@ -46,7 +46,7 @@
 .cta-title {
     margin-bottom: 25px;
     font-family: var(--font-family-accent);
-    font-size: clamp(1.875rem, 0.5417rem + 6.6667vw, 3.875rem);
+    font-size: clamp(1.875rem, 6.6667vw, var(--title-font-size));
     line-height: 1;
 }
 

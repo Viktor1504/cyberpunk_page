@@ -3,6 +3,8 @@
     background-color: var(--color-white);
     padding-top: 70px;
     padding-bottom: 140px;
+    height: auto;
+    overflow: hidden;
 }
 
 .intro::after {
@@ -19,7 +21,7 @@
 .intro-title {
     padding-bottom: 25px;
     font-family: var(--font-family-accent);
-    font-size: 3.875rem;
+    font-size: clamp(1.875rem, 6.6667vw, var(--title-font-size));
     line-height: 1;
 }
 
@@ -27,29 +29,32 @@
     padding-bottom: 70px;
 }
 
+/* Основной контейнер для gallery */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    justify-content: space-between; /* Это помогает элементам располагаться корректно */
+    margin-bottom: 100px; /* Добавим отступ снизу, чтобы избежать наложения */
 }
 
 .gallery-sidebar {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    flex: 1; /* Устанавливаем гибкость для сайдбара */
 }
 
 .gallery-item {
     width: 100%;
-}
-
-.gallery-main {
+    max-width: 100%; /* Убедимся, что изображения не выходят за пределы */
 }
 
 .gallery-featured {
+    width: 100%; /* Убедимся, что это изображение не выходит за пределы */
 }
 
-/* Адаптивное поведение для sidebar */
+/* Адаптивные медиа-запросы */
 @media (max-width: 1350px) {
     .gallery {
         flex-direction: column;
@@ -89,4 +94,7 @@
         font-size: 1rem;
     }
 
+    .gallery {
+        flex-direction: column; /* Чтобы элементы не выходили за пределы */
+    }
 }
