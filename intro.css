@@ -1,10 +1,12 @@
 .intro {
+    scroll-snap-align: center;
     position: relative;
     background-color: var(--color-white);
-    padding-top: 70px;
-    padding-bottom: 140px;
-    height: auto;
-    overflow: hidden;
+    padding: 90px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro::after {
@@ -35,7 +37,6 @@
     flex-wrap: wrap;
     gap: 32px;
     justify-content: space-between; /* Это помогает элементам располагаться корректно */
-    margin-bottom: 100px; /* Добавим отступ снизу, чтобы избежать наложения */
 }
 
 .gallery-sidebar {

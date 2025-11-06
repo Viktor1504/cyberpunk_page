@@ -1,13 +1,15 @@
 .hero {
+    scroll-snap-align: center;
     background: url("./assets/images/main-banner.jpg") center / cover no-repeat;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
 }
 
 .hero-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    flex: 1; /* Растягивается на всю высоту */
 }
 
 .header {
@@ -31,7 +33,6 @@
     width: 100%;
     aspect-ratio: 1;
 }
-
 
 .cta-box {
     display: flex;
@@ -104,6 +105,3 @@
         padding: 10px 50px;
     }
 }
-
-
-

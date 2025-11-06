@@ -1,0 +1,4 @@
+.platforms {
+    scroll-snap-align: center;
+    min-height: 100vh;
+}

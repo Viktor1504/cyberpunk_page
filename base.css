@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 34px;
+    color: var(--color-black);
+    background-color: var(--color-black);
+    margin: 0;
+}
+
 h1, h2, p, form {
     margin: 0;
 }
@@ -56,16 +71,6 @@ ul {
     clip-path: inset(100%) !important;
     clip: rect(0 0 0 0) !important;
     overflow: hidden !important;
-}
-
-body {
-    font-family: var(--font-family-base);
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 34px;
-    color: var(--color-black);
-    background-color: var(--color-black);
-    margin: 0;
 }
 
 .container {

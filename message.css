@@ -1,7 +1,11 @@
 .message {
+    scroll-snap-align: center;
     color: var(--color-white);
-    padding: 15px 0 70px 0;
-    height: 100vh;
+    padding: 90px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .message-container {
