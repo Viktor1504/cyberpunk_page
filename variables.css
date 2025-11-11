@@ -18,8 +18,8 @@
     --gap-large: 48px;
     --icon-size: 32px;
 
-    --section-padding: 90px;
-    --section-padding-mobile: 60px;
+    --section-padding: 20px;
+    --section-padding-mobile: 10px;
 
     /* Common sizes */
     --decorative-line-height: 70px;
