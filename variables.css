@@ -1,15 +1,51 @@
 :root {
-    --color-black: #000000FF;
-    --color-white: #FFFFFFFF;
-    --color-yellow: #F8F200FF;
-    --color-aqua-green: #52BEDCFF;
-    --color-dark-gray: #777777FF;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-yellow: #F8F200;
+    --color-aqua-green: #52BEDC;
+    --color-dark-gray: #777777;
+    --color-white-gray: #E6E6E6;
 
     --font-family-base: 'Roboto', sans-serif;
     --font-family-accent: 'Archangelsk', sans-serif;
     --title-font-size: 3.875rem;
 
-
     --container-width: 1280px;
     --container-padding-x: 35px;
+
+    --gap-small: 15px;
+    --gap-medium: 32px;
+    --gap-large: 48px;
+    --icon-size: 32px;
+
+    --section-padding: 90px;
+    --section-padding-mobile: 60px;
+
+    /* Common sizes */
+    --decorative-line-height: 70px;
+    --border-radius-small: 2px;
+    --border-radius-medium: 4px;
+    --border-radius-large: 8px;
+    --outline-width: 2px;
+    --outline-offset-small: 2px;
+    --outline-offset-medium: 4px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.3s ease-in-out;
+    
+    /* Form sizes */
+    --form-input-height: 35px;
+    --form-input-max-width: 460px;
+    --form-button-width: 192px;
+    --form-button-height: 60px;
+    
+    /* Console sizes */
+    --console-width-large: 296px;
+    --console-height-large: 351px;
+    --console-width-medium: 150px;
+    --console-height-medium: 175px;
+    --console-width-small: 85px;
+    --console-height-small: 100px;
 }

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cyberpunk 2077 - приключенческая ролевая игра в мегаполисе Найт-Сити. Играй и выигрывай консоли Xbox Series X или PlayStation 5!">
+    <link rel="preload" href="assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Archangelsk.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/images/main-banner.jpg" as="image">
     <link rel="stylesheet" href="styles.css">
-    <title>Cyberpunk</title>
+    <title>Cyberpunk 2077</title>
 </head>
 <body>
 <main class="content">
@@ -12,55 +16,61 @@
         <h1 class="visually-hidden">Cyberpunk</h1>
         <div class="hero-wrapper container">
             <header class="header">
-                <a class="logo-link" href="">
-                    <img class="logo" src="assets/images/logo.png" alt="Cyberpunk logo" width="296"
-                         height="74">
+                <a class="logo-link" href="#" aria-label="На главную">
+                    <img class="logo" src="assets/images/logo.png" alt="Cyberpunk 2077" width="296"
+                         height="74" loading="eager" fetchpriority="high">
                 </a>
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="https://www.youtube.com/user/CyberPunkGame">
-                                <svg class="nav-icon">
+                            <a href="https://www.youtube.com/user/CyberPunkGame" target="_blank"
+                               rel="noopener noreferrer" aria-label="Youtube">
+                                <svg class="nav-icon" aria-hidden="true">
                                     <use href="./assets/sprites.svg#youtube-icon"></use>
                                 </svg>
                                 <span class="visually-hidden">Youtube</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://vk.com/cyberpunkgame">
-                                <svg class="nav-icon">
+                            <a href="https://vk.com/cyberpunkgame" target="_blank" rel="noopener noreferrer"
+                               aria-label="VK">
+                                <svg class="nav-icon" aria-hidden="true">
                                     <use href="./assets/sprites.svg#vk-icon"></use>
                                 </svg>
                                 <span class="visually-hidden">Vk</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.facebook.com/groups/Cyberpunk2077/">
-                                <svg class="nav-icon">
+                            <a href="https://www.facebook.com/groups/Cyberpunk2077/" target="_blank"
+                               rel="noopener noreferrer" aria-label="Facebook">
+                                <svg class="nav-icon" aria-hidden="true">
                                     <use href="./assets/sprites.svg#facebook-icon"></use>
                                 </svg>
                                 <span class="visually-hidden">Facebook</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://x.com/cyberpunkgame/?lang=bn">
-                                <svg class="nav-icon">
+                            <a href="https://x.com/cyberpunkgame/?lang=bn" target="_blank" rel="noopener noreferrer"
+                               aria-label="X (Twitter)">
+                                <svg class="nav-icon" aria-hidden="true">
                                     <use href="./assets/sprites.svg#twitter-icon"></use>
                                 </svg>
                                 <span class="visually-hidden">X</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.twitch.tv/directory/category/cyberpunk-2077">
-                                <svg class="nav-icon">
+                            <a href="https://www.twitch.tv/directory/category/cyberpunk-2077" target="_blank"
+                               rel="noopener noreferrer" aria-label="Twitch">
+                                <svg class="nav-icon" aria-hidden="true">
                                     <use href="./assets/sprites.svg#twitch-icon"></use>
                                 </svg>
                                 <span class="visually-hidden">Twitch</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.instagram.com/cdprojektred/">
-                                <svg class="nav-icon">
+                            <a href="https://www.instagram.com/cdprojektred/" target="_blank" rel="noopener noreferrer"
+                               aria-label="Instagram">
+                                <svg class="nav-icon" aria-hidden="true">
                                     <use href="./assets/sprites.svg#instagram-icon"></use>
                                 </svg>
                                 <span class="visually-hidden">Instagram</span>
@@ -71,7 +81,7 @@
             </header>
             <div class="cta-box angles-box">
                 <h2 class="cta-title">Доступно на всех платформах</h2>
-                <a class="button cta-button" href="#">Узнать больше</a>
+                <a class="button cta-button" href="#platforms" aria-label="Узнать больше о платформах">Узнать больше</a>
             </div>
         </div>
     </section>
@@ -88,13 +98,13 @@
             <div class="gallery">
                 <div class="gallery-sidebar">
                     <img class="gallery-item angles-box" src="./assets/images/intro/left_1.jpg"
-                         alt="Изображение 1">
+                         alt="Найт-Сити, вид на город" loading="lazy">
                     <img class="gallery-item angles-box" src="./assets/images/intro/left_2.jpg"
-                         alt="Изображение 2">
+                         alt="Персонаж в Найт-Сити" loading="lazy">
                 </div>
                 <div class="gallery-main">
                     <img class="gallery-featured angles-box" src="./assets/images/intro/right_1.jpg"
-                         alt="Изображение 3">
+                         alt="Геймплей Cyberpunk 2077" loading="lazy">
                 </div>
             </div>
         </div>
@@ -113,26 +123,31 @@
                 PlayStation 5!</span> Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша будут
                 подведены 1 февраля. Удачи! ;)
             </p>
-            <form class="form">
-                <label class="visually-hidden" for="name">Name</label>
-                <input class="form-input" type="text" name="name" id="name" placeholder="Как тебя зовут?">
+            <form class="form" novalidate>
+                <label class="visually-hidden" for="name">Имя</label>
+                <input class="form-input" type="text" name="name" id="name" placeholder="Как тебя зовут?" required
+                       aria-required="true">
                 <label class="visually-hidden" for="email">Email</label>
-                <input class="form-input" type="email" name="email" id="email" placeholder="Твой е-mail">
+                <input class="form-input" type="email" name="email" id="email" placeholder="Твой е-mail" required
+                       aria-required="true">
+                <label class="visually-hidden" for="file-upload">Прикрепить скриншот</label>
                 <div class="upload-area">
-                    <input class="file-input" type="file" id="file-upload"/>
+                    <input class="file-input" type="file" id="file-upload" name="screenshot"
+                           accept=".png,.jpg,.jpeg,.pdf" aria-required="true"/>
                     <span class="upload-label">Прикрепить скриншот</span>
                     <span class="upload-hint">.png / .jpg / .pdf</span>
                 </div>
                 <button class="button form-button" type="submit">Отправить</button>
-                <input name="agree-form" id="agree" value="true" type="checkbox">
+                <input name="agree-form" id="agree" value="true" type="checkbox" required aria-required="true">
                 <label class="checkbox-label" for="agree">Согласен на обработку персональных данных</label>
             </form>
             <div class="consoles">
                 <div class="image-wrapper" data-bg="xbox">
-                    <img class='console-xbox' src="./assets/images/message/xbox.png" alt="xbox">
+                    <img class='console-xbox' src="./assets/images/message/xbox.png" alt="Xbox Series X" loading="lazy">
                 </div>
                 <div class="image-wrapper" data-bg="ps5">
-                    <img class="console-ps5" src="./assets/images/message/ps5.png" alt="ps5">
+                    <img class="console-ps5" src="./assets/images/message/ps5.png" alt="Sony PlayStation 5"
+                         loading="lazy">
                 </div>
             </div>
         </div>
@@ -140,8 +155,8 @@
     <section class="advertising">
         <div class="advertising-wrapper container">
             <div class="advertising-banners">
-                <img class="monitor-img" src="./assets/images/advertising/monitor.png" alt="monitor" width="624px"
-                     height="430px">
+                <img class="monitor-img" src="./assets/images/advertising/monitor.png" alt="Монитор HP" width="624"
+                     height="430" loading="lazy">
                 <div class="gallery-advertising">
                     <svg class="hp-icon">
                         <use href="./assets/sprites.svg#hp-icon"></use>
@@ -180,81 +195,94 @@
                         <p class="feature-text">Быстрые движения и плавный геймплей</p>
                     </div>
                 </div>
-                <a class="button advertising-button" href="#">Подробнее</a>
+                <a class="button advertising-button" href="#" aria-label="Подробнее о мониторе HP">Подробнее</a>
             </div>
         </div>
     </section>
-    <section class="platforms">
+    <section class="platforms" id="platforms">
         <div class="platforms-wrapper">
-            <img src="./assets/images/platforms/platforms-disks.jpg" alt="platforms_disks">
+            <img class="platforms-img" src="./assets/images/platforms/platforms-disks.jpg"
+                 alt="Комплект дисков Cyberpunk 2077" loading="lazy">
             <div class="platforms-text">
                 <h2 class="platforms-title">Купить игру Cyberpunk 2077</h2>
-                <h3 class="package-title">В комплект входит:</h3>
+
+                <h3 class="package-title aqua-text">В комплект входит:</h3>
+
                 <ul class="package-list">
                     <li class="package-item">
-                        <svg class="disk-icon">
+                        <svg class="icon" aria-hidden="true">
                             <use href="./assets/sprites.svg#disk-icon"></use>
                         </svg>
                         <p class="package-text">Футляр с игровыми дисками</p>
                     </li>
                     <li class="package-item">
-                        <svg class="code-icon">
+                        <svg class="icon" aria-hidden="true">
                             <use href="./assets/sprites.svg#code-icon"></use>
                         </svg>
-                        <p class="package-text">Футляр с кодом для загрузки игры и дисками (pc)</p>
+                        <p class="package-text">Футляр с кодом для загрузки игры и дисками (PC)</p>
                     </li>
                     <li class="package-item">
-                        <svg class="directory-icon">
+                        <svg class="icon" aria-hidden="true">
                             <use href="./assets/sprites.svg#directory-icon"></use>
                         </svg>
                         <p class="package-text">Справочник с информацией об игровом мире</p>
                     </li>
                 </ul>
-                <h3 class="select-platform">Выберите платформу:</h3>
-                <ul class="platforms-list">
-                    <li class="platforms-item">
-                        <svg class="pc-icon">
-                            <use href="./assets/sprites.svg#pc-icon"></use>
-                        </svg>
+
+                <h3 class="select-platform aqua-text">Выберите платформу:</h3>
+
+                <ul class="platforms-list" role="list" aria-label="Выбор игровой платформы">
+                    <li>
+                        <button class="platform-button" aria-label="Купить для PC">
+                            <svg class="pc-icon" aria-hidden="true">
+                                <use href="./assets/sprites.svg#pc-icon"></use>
+                            </svg>
+                        </button>
                     </li>
-                    <li class="platforms-item">
-                        <svg class="xbox-icon">
-                            <use href="./assets/sprites.svg#xbox-icon"></use>
-                        </svg>
+                    <li>
+                        <button class="platform-button" aria-label="Купить для Xbox">
+                            <svg class="xbox-icon" aria-hidden="true">
+                                <use href="./assets/sprites.svg#xbox-icon"></use>
+                            </svg>
+                        </button>
                     </li>
-                    <li class="platforms-item">
-                        <svg class="stadia-icon">
-                            <use href="./assets/sprites.svg#stadia-icon"></use>
-                        </svg>
+                    <li>
+                        <button class="platform-button" aria-label="Купить для Google Stadia">
+                            <svg class="stadia-icon" aria-hidden="true">
+                                <use href="./assets/sprites.svg#stadia-icon"></use>
+                            </svg>
+                        </button>
                     </li>
-                    <li class="platforms-item">
-                        <svg class="ps4-icon">
-                            <use href="./assets/sprites.svg#ps4-icon"></use>
-                        </svg>
+                    <li>
+                        <button class="platform-button" aria-label="Купить для PlayStation 4">
+                            <svg class="ps4-icon" aria-hidden="true">
+                                <use href="./assets/sprites.svg#ps4-icon"></use>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
-        <footer class="footer">
-            <div class="footer-wrapper">
-                <div class="footer-main">
-                    <div class="footer-logos">
-                        <img class="logo-first" src="assets/images/logo.png" alt="Cyberpunk logo" width="300"
-                             height="75">
-                        <img class="logo-second" src="assets/images/platforms/icons/CD_Projekt_logo.png" alt="Cyberpunk logo" width="170"
-                             height="70">
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Лицензия</a>
-                        <a href="#">Политика конфиденциальности</a>
-                    </div>
-                </div>
-                <div class="footer-trademark">
-                    <p class="trademark-text">CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®</p>
-                </div>
-            </div>
-        </footer>
     </section>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-main">
+                <div class="footer-logos">
+                    <img class="logo-first" src="assets/images/logo.png" alt="Логотип Cyberpunk 2077" width="300"
+                         height="75" loading="lazy">
+                    <img class="logo-second" src="assets/images/platforms/icons/CD_Projekt_logo.png"
+                         alt="Логотип CD Projekt RED" width="170" height="70" loading="lazy">
+                </div>
+                <nav class="footer-links" aria-label="Правовая информация">
+                    <a href="#license">Лицензия</a>
+                    <a href="#privacy">Политика конфиденциальности</a>
+                </nav>
+            </div>
+            <div class="footer-trademark">
+                <p class="trademark-text">CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®</p>
+            </div>
+        </div>
+    </footer>
 </main>
 </body>
 </html>

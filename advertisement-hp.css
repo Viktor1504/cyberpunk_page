@@ -1,14 +1,12 @@
 .advertising {
-    scroll-snap-align: center;
     position: relative;
     background-color: var(--color-yellow);
-    padding: 90px 0;
+    padding: var(--section-padding) 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .advertising::before {
     content: '';
@@ -16,7 +14,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: var(--decorative-line-height);
     background: url("./assets/images/decorative-line-yellow.png") center/cover no-repeat;
     z-index: 1;
 }
@@ -24,29 +22,23 @@
 .advertising-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center; /* Центрируем элементы внутри сетки по горизонтали */
-    gap: 32px; /* Отступы между элементами */
-    width: 100%; /* Задаем ширину 100% */
-    height: 100%; /* Задаем высоту 100% */
+    justify-items: center;
+    gap: var(--gap-medium);
+    width: 100%;
 }
 
 .advertising-banners {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-}
-
-.monitor {
-    width: 624px;
-    height: 430px;
+    gap: var(--gap-small);
 }
 
 .gallery-advertising {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: var(--gap-small);
 }
 
 .hp-icon {
@@ -62,24 +54,24 @@
 .advertising-text {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: var(--gap-small);
 }
 
 .advertising-title {
     font-family: var(--font-family-accent);
     font-size: clamp(1.875rem, 6.6667vw, var(--title-font-size));
     font-weight: 400;
-    margin: 0;
     line-height: 1;
 }
 
 .advertising-description {
+    line-height: 1.6;
 }
 
 .features {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--gap-small);
 }
 
 .feature-item {
@@ -113,13 +105,13 @@
 
 .monitor-img {
     width: 624px;
-    height: 430px
+    height: 430px;
 }
 
 @media (max-width: 1024px) {
     .monitor-img {
         width: 460px;
-        height: 320px
+        height: 320px;
     }
 
     .gallery-advertising {
@@ -128,13 +120,17 @@
 }
 
 @media (max-width: 860px) {
+    .advertising {
+        padding: var(--section-padding-mobile) 0;
+    }
+
     .advertising-wrapper {
         grid-template-columns: 1fr;
     }
 
     .monitor-img {
         width: 296px;
-        height: 204px
+        height: 204px;
     }
 
     .gallery-advertising {
@@ -155,5 +151,17 @@
     .logo-icon {
         width: 175px;
         height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .monitor-img {
+        width: 100%;
+        max-width: 296px;
+        height: auto;
+    }
+
+    .advertising-text {
+        gap: var(--gap-small);
     }
 }

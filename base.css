@@ -6,7 +6,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -17,25 +16,46 @@ body {
     color: var(--color-black);
     background-color: var(--color-black);
     margin: 0;
+    min-height: 100vh;
 }
 
-h1, h2, p, form {
-    margin: 0;
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-span {
-    margin: 0;
-    line-height: 1;
+.content > section:not(.platforms):not(.footer) {
+    flex-shrink: 0;
 }
+
+h1, h2, h3, h4, h5, h6, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 a {
     text-decoration: none;
     color: inherit;
 }
 
+a:focus-visible {
+    outline: var(--outline-width) solid var(--color-aqua-green);
+    outline-offset: var(--outline-offset-small);
+    border-radius: var(--border-radius-small);
+}
+
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .button {
@@ -49,7 +69,7 @@ ul {
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--transition-base);
 }
 
 .button:hover {
@@ -58,6 +78,11 @@ ul {
 
 .button:active {
     transform: translateY(0);
+}
+
+.button:focus-visible {
+    outline: var(--outline-width) solid var(--color-yellow);
+    outline-offset: var(--outline-offset-medium);
 }
 
 .visually-hidden {

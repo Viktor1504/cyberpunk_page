@@ -1,7 +1,6 @@
 .message {
-    scroll-snap-align: center;
     color: var(--color-white);
-    padding: 90px 0;
+    padding: var(--section-padding) 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,13 +16,14 @@
         "form consoles";
     align-items: center;
     gap: 30px;
+    width: 100%;
 }
 
 .prize-title-wrapper {
-    grid-area: prize-icon; /* Указываем область, чтобы располагались в нужной части сетки */
+    grid-area: prize-icon;
     display: flex;
-    align-items: center; /* Вертикальное выравнивание */
-    gap: 30px; /* Отступ между иконкой и заголовком */
+    align-items: center;
+    gap: 30px;
 }
 
 .prize-icon {
@@ -33,9 +33,8 @@
 
 .message-title {
     font-family: var(--font-family-accent);
-    font-size: clamp(1.875rem, 6.6667vw, var(--title-font-size));;
+    font-size: clamp(1.875rem, 6.6667vw, var(--title-font-size));
     font-weight: 400;
-    margin: 0;
 }
 
 .message-text {
@@ -47,6 +46,8 @@
 .form {
     grid-area: form;
     margin-top: 125px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-input {
@@ -59,14 +60,24 @@
     color: inherit;
     appearance: none;
     border-bottom: 1px solid var(--color-dark-gray);
-    max-width: 460px;
+    max-width: var(--form-input-max-width);
     width: 100%;
-    height: 35px;
+    height: var(--form-input-height);
 }
 
 .form-input::placeholder {
     color: var(--color-white);
     font-weight: 300;
+}
+
+.form-input:focus {
+    border-bottom-color: var(--color-aqua-green);
+}
+
+.form-input:focus-visible {
+    outline: var(--outline-width) solid var(--color-aqua-green);
+    outline-offset: var(--outline-offset-small);
+    border-radius: var(--border-radius-small);
 }
 
 .upload-area {
@@ -81,10 +92,14 @@
     padding: 40px 0;
     background: transparent;
     font: inherit;
-    transition: border-color 0.3s ease;
-    max-width: 460px;
+    transition: border-color var(--transition-base);
+    max-width: var(--form-input-max-width);
     width: 100%;
     margin-bottom: 35px;
+}
+
+.upload-area:has(.file-input:focus-visible) {
+    border-color: var(--color-aqua-green);
 }
 
 .upload-area:hover {
@@ -101,6 +116,12 @@
     cursor: pointer;
 }
 
+.file-input:focus-visible ~ .upload-label {
+    outline: var(--outline-width) solid var(--color-aqua-green);
+    outline-offset: var(--outline-offset-small);
+    border-radius: var(--border-radius-small);
+}
+
 .upload-label {
     display: block;
     font-size: 1.125rem;
@@ -113,25 +134,27 @@
 }
 
 .form-button {
-    width: 192px;
-    height: 60px;
-    margin-bottom: 15px;
+    width: var(--form-button-width);
+    height: var(--form-button-height);
+    margin-bottom: var(--gap-small);
     background-color: var(--color-yellow);
     color: var(--color-black);
     font-weight: 900;
     font-size: 1.125rem;
 }
 
-/* Скрываем стандартный чекбокс */
+.form-button:focus-visible {
+    outline: var(--outline-width) solid var(--color-black);
+    outline-offset: var(--outline-offset-medium);
+}
+
 input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
-    height: 0;
     width: 0;
+    height: 0;
 }
 
-/* Создаем кастомный чекбокс */
 .checkbox-label {
     position: relative;
     display: flex;
@@ -143,41 +166,44 @@ input[type="checkbox"] {
     user-select: none;
 }
 
-/* Кастомный чекбокс */
 .checkbox-label::before {
     content: '';
     display: inline-block;
     width: 14px;
     aspect-ratio: 1;
     border: 1px solid var(--color-dark-gray);
-    transition: all 0.3s ease;
+    transition: border-color var(--transition-base), background-color var(--transition-base);
 }
 
-/* Галочка */
 .checkbox-label::after {
     content: '';
     position: absolute;
     left: 5px;
     top: 45%;
-    transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg) scale(0);
     width: 4px;
     height: 7px;
-    border: solid var(--color-yellow);
+    border: solid var(--color-black);
     border-width: 0 1px 1px 0;
-    opacity: 0;
-    transition: all 0.3s ease;
+    transition: transform var(--transition-base);
+}
+
+input[type="checkbox"]:checked + .checkbox-label::before {
+    background-color: var(--color-yellow);
+    border-color: var(--color-yellow);
 }
 
 input[type="checkbox"]:checked + .checkbox-label::after {
-    opacity: 1;
-    border-color: var(--color-yellow);
-    transform: translateY(-50%) rotate(45deg) scale(1.1);
+    transform: translateY(-50%) rotate(45deg) scale(1);
 }
 
-/* Состояние при наведении */
+input[type="checkbox"]:focus-visible + .checkbox-label::before {
+    outline: var(--outline-width) solid var(--color-aqua-green);
+    outline-offset: var(--outline-offset-small);
+}
+
 .checkbox-label:hover::before {
     border-color: var(--color-white);
-    box-shadow: 0 0 8px rgba(255, 255, 0, 0.3);
 }
 
 .consoles {
@@ -203,7 +229,7 @@ input[type="checkbox"]:checked + .checkbox-label::after {
     position: absolute;
     top: 0;
     left: 0;
-    width: 460px;
+    width: 100%;
     aspect-ratio: 1;
     background: center/cover no-repeat;
     z-index: -1;
@@ -217,20 +243,21 @@ input[type="checkbox"]:checked + .checkbox-label::after {
     background-image: url("./assets/images/message/bg-ps5.png");
 }
 
-.console-xbox {
-    position: absolute;
-    top: 20px;
-    left: 160px;
-    width: 296px;
-    height: 351px;
-}
-
+.console-xbox,
 .console-ps5 {
     position: absolute;
     top: 20px;
+    width: var(--console-width-large);
+    height: var(--console-height-large);
+    object-fit: contain;
+}
+
+.console-xbox {
+    left: 160px;
+}
+
+.console-ps5 {
     left: 150px;
-    width: 296px;
-    height: 351px;
 }
 
 @media (max-width: 1320px) {
@@ -297,26 +324,23 @@ input[type="checkbox"]:checked + .checkbox-label::after {
         width: 230px;
     }
 
-    .console-xbox {
-        width: 150px;
-        height: 175px;
-        left: 80px;
-    }
-
+    .console-xbox,
     .console-ps5 {
-        width: 150px;
-        height: 175px;
+        width: var(--console-width-medium);
+        height: var(--console-height-medium);
         left: 80px;
     }
 
     .image-wrapper:first-child {
         transform: none;
     }
-
-
 }
 
 @media (max-width: 768px) {
+    .message {
+        padding: var(--section-padding-mobile) 0;
+    }
+
     .prize-icon {
         width: 62px;
         aspect-ratio: 1;
@@ -330,16 +354,10 @@ input[type="checkbox"]:checked + .checkbox-label::after {
         width: 130px;
     }
 
-    .console-xbox {
-        width: 85px;
-        height: 100px;
-        top: 10px;
-        left: 45px;
-    }
-
+    .console-xbox,
     .console-ps5 {
-        width: 85px;
-        height: 100px;
+        width: var(--console-width-small);
+        height: var(--console-height-small);
         top: 10px;
         left: 45px;
     }
@@ -349,6 +367,14 @@ input[type="checkbox"]:checked + .checkbox-label::after {
     }
 
     .form {
-        margin-top: 70px;
+        margin-top: 50px;
+    }
+
+    .form-input {
+        margin-bottom: 25px;
+    }
+
+    .upload-area {
+        margin-bottom: 25px;
     }
 }
